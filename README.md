@@ -27,3 +27,10 @@ docker push miljanpavlovic/spring-app-test:latest
 
 
 ## Deploying on Kubernetes
+```
+git clone ...
+cd spring-app-test/K8S
+kubectl apply -f namespace-dev.yaml
+kubectl apply -f k8s-deployment.yaml
+kubectl apply -f rolling.yaml
+```
