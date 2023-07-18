@@ -32,7 +32,7 @@ docker run -d -p 8090:8090 miljanpavlovic/spring-app-test:latest
 
 ## Deploying on Kubernetes
 ```
-git clone ...
+git clone https://github.com/miljanpavlovic6/spring-app-test.git
 cd spring-app-test/K8S
 kubectl apply -f namespace-dev.yaml
 kubectl apply -f k8s-deployment.yaml
