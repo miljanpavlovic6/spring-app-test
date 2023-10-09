@@ -7,11 +7,13 @@
 ### Create the local image from Dockerfile
 -Dockerfile
 ```
-FROM openjdk:8-jdk-alpine
+FROM bellsoft/liberica-openjdk-debian
+LABEL "author"="miljan"
+LABEL "Date"="09/28/2023"
 EXPOSE 8090
-ARG JAR_FILE=app-test-1.jar
-ADD ${JAR_FILE} app-test-1.jar
-ENTRYPOINT ["java","-jar","/app-test-1.jar"]
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT  ["java","-jar","/app.jar"]
 ```
 Execute and test locally
 ```
